@@ -1,6 +1,5 @@
 #pygame importálása
 import pygame, sys
-import random
 
 #inicializáció
 pygame.init()
