@@ -71,8 +71,6 @@ def draw(screen, grid, buttons):
     for button in buttons:
         button.draw(screen)
 
-    pygame.display.update()
-
 def init_grid(rows, cols, color):
     grid = []
 
@@ -170,7 +168,9 @@ def egytengelyes_rajzolas():
     ]
     
     while True:
-        
+        screen.fill((0,0,0))
+        screen.blit(startText, ((screen_width - startText.get_width())/2,0))
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -225,7 +225,9 @@ def kettengelyes_rajzolas():
     ]
 
     while True:
-        
+        screen.fill((0,0,0))
+        screen.blit(startText, ((screen_width - startText.get_width())/2,0))
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
